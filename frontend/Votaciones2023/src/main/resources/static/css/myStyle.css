@@ -1,0 +1,39 @@
+body{
+	width: 90%;
+	margin: 15px auto;
+	padding: 15px auto;
+}
+
+h1{
+	text-align: center;
+	color:rgb(223, 0, 0);
+}
+
+p{
+	text-align: justify;
+}
+
+.imgStyle{
+	display:block;
+	margin: auto;
+	width:350px;
+	height:200px;
+}
+#opciones, li{
+	display:inline-block;
+}
+
+#menu{
+	text-align: center;
+	border-color:rgb(0, 0, 255);
+	border-style: solid;
+	width:200% auto;
+	height:35px;
+}
+
+#izq{
+	width:60%;
+	margin: 15px;
+	padding:15px auto;
+	float: left;
+}

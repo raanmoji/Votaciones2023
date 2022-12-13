@@ -1,0 +1,150 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
+	xmlns:sec="http://thymeleaf.org/thymeleaf-extras-springsecurity3"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+
+<head>
+	<title>Voto Electonico</title>
+	<meta charset="utf-8" content="Aplicaion web">
+	<link rel="stylesheet" type="text/css" th:href="@{/css/bootstrap.css}">
+	<link rel="stylesheet" type="text/css" th:href="@{/css/myStyle.css}">
+	<script type="text/javascript" th:src="@{/js/myScript.js}"></script>
+</head>
+
+<body>
+	<header id="cabeza">
+		<h1> SISTEMA VOTACIONES 2023 </h1>
+		<img th:src="@{/img/Votar.png}" style="display: block; width:500px; margin: auto;"> </header>
+	<nav id="menu">
+		<ul id="opciones">
+			<li><a th:href="@{/index}">Inicio</a></li>
+			<li><a th:href="@{/index}">Opción 1</a></li>
+			<li><a th:href="@{/index}">Opción 2</a></li>
+			<li><a th:href="@{/index}">Opción 3</a></li>
+		</ul>
+		</nav>
+		<aside id="izq">
+			<form name="VOT" th:object="${voto}" method="post" th:action="@{/voto}">
+			
+
+
+				<p>
+					Las votaciones se realizarán el 29 de octubre del próximo año
+				</p>
+				<h5>Seleccione el candidato y presione el botón 'Registrar voto': </h5>
+				<table class="table">
+					<thead>
+						<tr>
+							<th scope="col"><input type="radio" name="idenCandidato" id="idenCandidato" value="1091">
+								Candidato 1</th>
+							<th scope="col"><input type="radio" name="idenCandidato" id="idenCandidato" value="6035">
+								Candidato 2</th>
+
+						</tr>
+					</thead>
+					<tbody>
+
+
+						<tr>
+
+							<td><img th:src="@{/img/Juliana.png}" class="imgStyle">
+								<p>
+									La ley de la cosecha es cosechar más de lo que se siembra.
+									Siembra un acto, y cosecharás un hábito. Siembra un hábito y cosechas un carácter.
+									Sembrar un carácter y cosechas un destino.
+									Las votaciones se realizarán el 29 de octubre del próximo año.No olvides votar por
+									SENBRAR
+								</p>
+
+								<p>
+									<img th:src="@{/img/logo 1.png}" style="width:80px; margin: auto;">
+									<!-- <button class="btn btn-primary" type="submit">Votar</button>-->
+								</p>
+
+
+							</td>
+							<td><img th:src="@{/img/Carlos.png}" class="imgStyle">
+								<p>
+									Si hay algo que tiene la vida es que está plagada de cambios.
+									El cambio es una constante en la existencia de cada persona,
+									y sin embargo le tenemos mucho miedo.
+									El cambio implica deshabituarse y salir de la zona de confort,
+									y es por eso que muchas veces adaptarnos a la nueva situación se nos hace
+									complicado.
+								</p>
+
+								<p>
+									<img th:src="@{/img/logo2.png}" style="width:80px; margin: auto;">
+									<!-- <button class="btn btn-primary" type="submit">Votar</button>-->
+								</p>
+
+							</td>
+
+						</tr>
+
+					</tbody>
+				</table>
+
+				<table class="table">
+					<thead>
+						<tr>
+							<th scope="col"><input type="radio" name="idenCandidato" id="idenCandidato" value="8815">
+								Candidato 3</th>
+							<th scope="col"><input type="radio" name="idenCandidato" id="idenCandidato" value="1090">
+								Candidato 4</th>
+
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+
+							<td><img th:src="@{/img/Claudia.png}" class="imgStyle">
+								<p>
+									La fuerza del Puebblo viene de cada miembro.
+									La fuerza de cada miembro es el Pueblo que quiere salir adelante.
+								</p>
+
+								<p>
+									<img th:src="@{/img/logo4.png}" style="width:80px; margin: auto;">
+									<!-- <button class="btn btn-primary" type="submit">Votar</button>-->
+								</p>
+
+							</td>
+							<td><img th:src="@{/img/JAVIER.png}" class="imgStyle">
+
+								<p>
+									Puedes diseñar, crear y construir el lugar más maravilloso del mundo,
+									pero se necesita gente para hacer el sueño realidad.
+								</p>
+
+								<p>
+									<img th:src="@{/img/logo3.png}" style="width:80px; margin: auto;">
+									<!-- <button class="btn btn-primary" type="submit">Votar</button>-->
+								</p>
+
+							</td>
+
+						</tr>
+						<tr>
+							<td colspan="2"><button type="submit" class="btn btn-outline-dark"
+									style="display:block; margin:auto;">Registrar voto</button></td>
+						</tr>
+					</tbody>
+				</table>
+			</form>
+		</aside>
+		<section id="der">
+			<img th:src="@{/img/Estadisticas.png}" style="display: block; width:500px; margin: auto;">
+			<div align="center">
+			<button type="button" class="btn btn-outline-warning" style="width:200px; height:60px; margin: auto;"
+				onclick="javascript:resultados();">Votos
+				por Candidato</button><br>
+			<button type="button" class="btn btn-outline-primary" style="width:200px; height:60px; margin: auto;">Votos
+				por Regiones</button><br>
+			<button type="button" class="btn btn-outline-danger"
+				style="width:200px; height:60px; margin: auto;">Resultados Consolidados</button>
+
+		</div>
+		</section>
+</body>
+
+</html>
