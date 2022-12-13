@@ -1,0 +1,37 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
+	xmlns:sec="http://thymeleaf.org/thymeleaf-extras-springsecurity3"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+
+<head>
+	<title>Voto Electonico</title>
+	<meta charset="utf-8" content="Aplicaion web">
+	<link rel="stylesheet" type="text/css" th:href="@{/css/bootstrap.css}">
+	<link rel="stylesheet" type="text/css" th:href="@{/css/myStyle.css}">
+</head>
+
+<body>
+	<header id="cabeza">
+		<h1> SISTEMA VOTACIONES 2023 </h1>
+		<img th:src="@{/img/Votar.png}" style="display: block; width:300px; margin: auto;" </header>
+
+		<aside style="width: 50%; margin: 30px auto; padding: 15px auto ;">
+			<form name="ING" th:action="@{/validar}" method="post" th:object="${votante}">
+				<div class="mb-3">
+					<label for="identificacion" class="form-label">Documento</label>
+					<input type="number" class="form-control"name="identificacion" required id="identificacion" aria-describedby="IdenHelp">
+					<div id="IdenHelp" class="form-text">Digite su número de documento(solo números).</div>
+				</div>
+				<div class="mb-3">
+					<label for="exampleInputPassword1" class="form-label">Password</label>
+					<input type="password" class="form-control" id="clave" name="clave" required aria-describedby="passHelp">
+					<div id="passHelp" class="form-text">Digite su Contraseña.</div>
+				</div>
+				
+				<button type="submit" class="btn btn-primary">Ingresar</button>
+			</form>
+
+		</aside>
+</body>
+
+
+</html>
